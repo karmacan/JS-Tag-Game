@@ -130,3 +130,15 @@ section {
   text-transform: uppercase;
   margin-bottom: 0.5rem;
 }
+
+/* Phone */
+@media (max-width: 500px) {
+  .cell {
+    height: 60px;
+    width: 60px;
+  }
+  .fill {
+    height: 50px;
+    width: 50px;
+  }
+}
