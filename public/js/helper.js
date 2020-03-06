@@ -43,10 +43,10 @@ function getNeighborsIds(actual, template, id) {
   return neighborsIds.filter(val => val !== undefined);
 }
 
-function getNeighbors(actual, template, id) {
-  const neighborsIds = getNeighborsIds(actual, template, id);
-  return neighborsIds.map(val => actual[val - 1]);
-}
+// function getNeighbors(actual, template, id) {
+//   const neighborsIds = getNeighborsIds(actual, template, id);
+//   return neighborsIds.map(val => actual[val - 1]);
+// }
 
 function generateUniqueRandomArray(n) {
   const arr = [];

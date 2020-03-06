@@ -1,16 +1,21 @@
+// Score dom elements
 const domMovesDisplay = document.querySelector('.moves');
 const domTimeDisplay = document.querySelector('.time');
 
+// Board dom elements
 const domCells = document.querySelectorAll('.cell'); // object
 let domFills;
 
+// Current held cell
 let heldCell = null;
 
+// Score vars
 let moves = 0;
 let h = 0;
 let m = 0;
 let s = 0;
 
+// Set interval pause
 let isSetIntervalPaused = false;
 
 // Template of actual matrix /* cells[row][col] */
