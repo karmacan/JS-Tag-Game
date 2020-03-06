@@ -27,15 +27,15 @@ function getNeighborsIds(actual, template, id) {
         // Top
         try { neighborsIds.push(template[i - 1][j]); } catch { null }
         // tl
-        try { neighborsIds.push(template[i - 1][j - 1]); } catch { null }
+        //try { neighborsIds.push(template[i - 1][j - 1]); } catch { null }
         // tr
-        try { neighborsIds.push(template[i - 1][j + 1]); } catch { null }
+        //try { neighborsIds.push(template[i - 1][j + 1]); } catch { null }
         // Bottom
         try { neighborsIds.push(template[i + 1][j]); } catch { null }
         // bl
-        try { neighborsIds.push(template[i + 1][j - 1]); } catch { null }
+        //try { neighborsIds.push(template[i + 1][j - 1]); } catch { null }
         // br
-        try { neighborsIds.push(template[i + 1][j + 1]); } catch { null }
+        //try { neighborsIds.push(template[i + 1][j + 1]); } catch { null }
       }
     });
   });
@@ -46,4 +46,13 @@ function getNeighborsIds(actual, template, id) {
 function getNeighbors(actual, template, id) {
   const neighborsIds = getNeighborsIds(actual, template, id);
   return neighborsIds.map(val => actual[val - 1]);
+}
+
+function generateUniqueRandomArray(n) {
+  const arr = [];
+  while (arr.length < n) {
+    const r = Math.floor(Math.random() * n) + 1;
+    if (arr.indexOf(r) === -1) arr.push(r);
+  }
+  return arr;
 }

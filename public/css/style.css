@@ -56,7 +56,7 @@ section {
   height: 100px;
   width: 100px;
   margin: 5px;
-  border: 3px salmon solid;
+  border: 3px blue solid;
   background: white;
 }
 
@@ -93,6 +93,40 @@ section {
 }
 
 .hovered {
-  background: #f4f4f4;
+  background: green;
   border-style: dashed;
+}
+
+.hovered-invalid {
+  background: red;
+  border-style: dashed;
+}
+
+.alert {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.5);
+  color: #eee;
+}
+
+.alert > div {
+  height: 8rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #333;
+}
+
+.alert h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
 }
